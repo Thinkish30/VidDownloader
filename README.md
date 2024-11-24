@@ -69,17 +69,25 @@ This will create a .app bundle in the dist directory. You can find the built app
 /dist/VidDowloader.app
 ```
 
-## Windows (Not Tested)
-To create a standalone macOS application, you can use py2app. Here’s how:
+## Windows
+To create a standalone windows application, you can use py2app. Here’s how:
 1. **Install py2exe**: Open your terminal and run:
 ```python
 pip install py2exe
 ```
 2. Use or modify the setup.py to configure the buildings
-3. **Build the Application**: In the terminal, navigate to your project directory and run:
+3. **Build the Application**: In the terminal, navigate to your project directory and run in terminal or cmd:
 ```python
-python setup.py py2exe
+
+pip install pyinstaller
+
+pyinstaller --onefile your_script.py
+
+your_script.py: Replace this with the name of your Python file.
+
 ```
+
+
 This will create a .app bundle in the dist directory. You can find the built application at: 
 ```python
 /dist/VidDowloader.exe
